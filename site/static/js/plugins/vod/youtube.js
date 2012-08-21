@@ -20,7 +20,17 @@ $(window).load(function() {
             );
             $('#videos').append(elem);
             $(elem).click(function() {
-                var iframe = $('<h2 id=' + videoid + '>' + title + '</h2><br><div class="embed-container"><iframe type="text/html" src="http://www.youtube.com/embed/' + videoid + '?autoplay=1" frameborder="0"></iframe></div><br><p>' + description + '<a href="#' + videoid + '"> Link</a></p>');
+                var elemclone = $(this).clone(true);
+                var iframe = $(
+                    '<h2 id=' + videoid + '>' + title + '</h2><br>' +
+                    '<div class="embed-container">' +
+                    '<iframe type="text/html" src="http://www.youtube.com/embed/' + videoid + '?autoplay=1" frameborder="0"></iframe>' +
+                    '</div><br>' +
+                    '<p>' + description + '<a href="#' + videoid + '"> Link</a></p>'
+                );
+                $(iframe).click(function() {
+                    $(iframe).replaceWith(elemclone)
+                });
                 $(this).replaceWith(iframe);
             });
          });

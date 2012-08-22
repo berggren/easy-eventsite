@@ -21,6 +21,10 @@ $(document).ready(function(){
 
     $.each(SETTINGS.livestreams, function(key, obj) {
         if (obj.published) {
+            if (obj.autostart) {
+                var iframe = $('<span class="label label-important pull-left" style="margin-right:10px;margin-top:7px;">LIVE!</span><h2>' + obj.title + '</h2><br><div class="embed-container"><iframe type="text/html" src="' + obj.url + '" frameborder="0"></iframe></div><br><p>' + obj.description + '</p><hr>');
+                $('#live-container').prepend(iframe);
+            } else {
             var elem = $(
                 '<div style="min-height:126px; margin-bottom: 20px;cursor: pointer;">' +
                     '<div class="thumbnail-clip">' +
@@ -35,6 +39,6 @@ $(document).ready(function(){
                 var iframe = $('<span class="label label-important pull-left" style="margin-right:10px;margin-top:7px;">LIVE!</span><h2>' + obj.title + '</h2><br><div class="embed-container"><iframe type="text/html" src="' + obj.url + '" frameborder="0"></iframe></div><br><p>' + obj.description + '</p>');
                 $(this).replaceWith(iframe);
             });
-        }
+        } }
     });
 });

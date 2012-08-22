@@ -17,7 +17,8 @@ var SETTINGS = {
             title: "Test",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel velit ante. Suspendisse consectetur luctus sagittis. Cras ut ligula sed nunc auctor mollis nec vel enim. Suspendisse potenti. Nullam luctus tincidunt sollicitudin. Suspendisse vel dolor vel lectus luctus tincidunt id nec mauris. Vestibulum aliquet odio quis turpis porttitor at lobortis augue tristique. Sed ante odio, semper vulputate vehicula et, faucibus et mi.",
             url: "http://<some-streaming-url>",
-            published: false
+            published: false,
+            autostart: false
         }
     },
     /* Show twitter stream, search for hashtag*/

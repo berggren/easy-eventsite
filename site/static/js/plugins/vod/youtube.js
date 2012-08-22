@@ -3,7 +3,7 @@
 */
 
 $(window).load(function() {
-    $.getJSON('http://gdata.youtube.com/feeds/api/playlists/' + SETTINGS.youtube_playlist + '?alt=json-in-script&callback=?', function(data){
+    $.getJSON('https://gdata.youtube.com/feeds/api/playlists/' + SETTINGS.youtube_playlist + '?alt=json-in-script&callback=?', function(data){
         $.each(data['feed']['entry'], function(index, entry){
             var title = entry['title']['$t'];
             var videoid = entry['media$group']['media$player'][0]['url'].split('/').reverse()[0].split('=')[1].split('&')[0]

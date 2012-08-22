@@ -3,7 +3,7 @@
 */
 
 $(window).load(function() {
-    $.getJSON('http://vimeo.com/api/v2/channel/' + SETTINGS.vimeo_channel + '/videos.json?callback=?', function(data){
+    $.getJSON('https://vimeo.com/api/v2/channel/' + SETTINGS.vimeo_channel + '/videos.json?callback=?', function(data){
         $.each(data, function(index, entry){
             var title = entry['title'];
             var videoid = entry['id'];

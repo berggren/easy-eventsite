@@ -170,7 +170,7 @@
             var source = item.source;
             var user_url = "http://"+s.twitter_url+"/"+screen_name;
             var avatar_size = s.avatar_size;
-            var avatar_url = item.profile_image_url || item.user.profile_image_url;
+            var avatar_url = item.profile_image_url_https || item.user.profile_image_url;
             var tweet_url = "http://"+s.twitter_url+"/"+screen_name+"/statuses/"+item.id_str;
             var tweet_time = parse_date(item.created_at);
             var tweet_relative_time = relative_time(tweet_time);

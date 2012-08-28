@@ -21,7 +21,7 @@ $(window).load(function() {
             $('#videos').append(elem);
             $(elem).click(function() {
                 var elemclone = $(this).clone(true);
-                var iframe = $('<h2 id=' + videoid + '>' + title + '</h2><br><div class="embed-container"><iframe src="http://player.vimeo.com/video/' + videoid + '?autoplay=true" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><br><p>' + description + '<a href="#' + videoid + '"> Link</a></p>');
+                var iframe = $('<h2 id=' + videoid + '>' + title + '</h2><span class="pull-right" style="margin-top:-20px;cursor:pointer;"><i class="icon-remove-sign"></i> Close</span><br><div class="embed-container"><iframe src="http://player.vimeo.com/video/' + videoid + '?autoplay=true" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><br><p>' + description + '<a href="#' + videoid + '"> Link</a></p>');
                 $(iframe).click(function() {
                     $(iframe).replaceWith(elemclone)
                 });

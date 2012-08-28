@@ -22,7 +22,7 @@ $(window).load(function() {
             $(elem).click(function() {
                 var elemclone = $(this).clone(true);
                 var iframe = $(
-                    '<h2 id=' + videoid + '>' + title + '</h2><br>' +
+                    '<h2 id=' + videoid + '>' + title + '</h2><span class="pull-right" style="margin-top:-20px;cursor:pointer;"><i class="icon-remove-sign"></i> Close</span><br>' +
                     '<div class="embed-container">' +
                     '<iframe type="text/html" src="http://www.youtube.com/embed/' + videoid + '?autoplay=1" frameborder="0"></iframe>' +
                     '</div><br>' +

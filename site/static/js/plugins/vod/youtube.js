@@ -25,7 +25,7 @@ $(window).load(function() {
                 var iframe = $(
                     '<h2 id=' + videoid + '>' + title + '</h2><span class="pull-right" style="margin-top:-20px;cursor:pointer;"><i class="icon-remove-sign"></i> Close</span><br>' +
                     '<div class="embed-container">' +
-                    '<iframe type="text/html" src="http://www.youtube.com/embed/' + videoid + '?autoplay=1" frameborder="0"></iframe>' +
+                    '<iframe type="text/html" src="https://www.youtube.com/embed/' + videoid + '?autoplay=1" frameborder="0"></iframe>' +
                     '</div><br>' +
                     '<p>' + description + '<a href="#' + videoid + '"> Link</a></p>'
                 );

@@ -8,7 +8,8 @@ $(window).load(function() {
             var title = entry['title']['$t'];
             var videoid = entry['media$group']['media$player'][0]['url'].split('/').reverse()[0].split('=')[1].split('&')[0]
             var description = entry['media$group']['media$description']['$t'];
-            var thumbnail = entry['media$group']['media$thumbnail'][0]['url'];
+            var thumbnail = entry['media$group']['media$thumbnail'][0]['url'].replace("http", "https");
+
             var elem = $(
                 '<div style="min-height:126px; margin-bottom: 20px;cursor: pointer;">' +
                 '<div class="thumbnail-clip">' +

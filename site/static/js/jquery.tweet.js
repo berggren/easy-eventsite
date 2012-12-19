@@ -23,7 +23,8 @@
       twitter_api_url: "api.twitter.com",       // [string]   custom twitter api url, if any (apigee, etc.)
       twitter_search_url: "search.twitter.com", // [string]   custom twitter search url, if any (apigee, etc.)
       template: function(info) {                // [function] template used to construct each tweet <li>
-          return info["avatar"] + info["time"] + info["join"] + info["text"];
+          return info["user"] + " - " + info["avatar"] + info["time"] + info["join"] + info["text"];
+
           //return info["user"] + "<br>" + info["join"] + info["text"] + "<br>" + info["time"];
       },
       comparator: function(tweet1, tweet2) {    // [function] comparator used to sort tweets (see Array.sort)
@@ -178,13 +179,13 @@
             var tweet_text = $([tweet_raw_text]).linkUrl().linkUser().linkHash()[0];
 
             // Default spans, and pre-formatted blocks for common layouts
-            var user = '<a class="tweet_user" href="'+user_url+'">'+screen_name+'</a>';
+            var user = '<a class="tweet_user" href="'+user_url+'"><b>'+screen_name+'</b></a>';
             var join = ((s.join_text) ? ('<span class="tweet_join"> '+join_text+' </span>') : ' ');
             var avatar = (avatar_size ?
                           ('<a class="tweet_avatar" href="'+user_url+'"><img src="'+avatar_url+
                            '" height="'+avatar_size+'" width="'+avatar_size+
                            '" alt="'+screen_name+'\'s avatar" title="'+screen_name+'\'s avatar" border="0"/></a>') : '');
-            var time = '<span class="tweet_time"><a href="'+tweet_url+'" title="view tweet on twitter">'+tweet_relative_time+'</a></span>';
+	    var time = '<span class="tweet_time"><a style="color:#777;" href="'+tweet_url+'" title="view tweet on twitter">'+tweet_relative_time+'</a></span>';
             var text = '<span class="tweet_text">'+$([tweet_text]).makeHeart().capAwesome().capEpic()[0]+ '</span>';
 
             return { item: item, // For advanced users who want to dig out other info

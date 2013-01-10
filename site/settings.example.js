@@ -1,11 +1,11 @@
 var SETTINGS = {
-    /* Which backend to use for Video on demand. Choose from the following providers: Vimeo, Youtube or NORDUnet MDS */
-    vodprovider: "mds",
+    /* Which backend to use for Video on demand. Choose from the following providers: vimeo, youtube or mds */
+    vodprovider: "youtube",
 
     /* Where to get content from the different providers
-    * Vimeo: Use the channel concept
-    * Youtube: USe the playlist concept
-    * NORDUnet MDS: Use the event concept
+    * vimeo: Use the channel concept
+    * youtube: USe the playlist concept
+    * mds: Use the event concept
     * */
     vimeo_channel: "changeme",
     youtube_playlist: "12345678",

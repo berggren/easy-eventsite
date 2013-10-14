@@ -1,7 +1,7 @@
 $(document).ready(function(){
     if (SETTINGS.twitter) {
         //$('#social').append('<div class="twitter-timeline"></div>');
-        $('head').append('<script id="twitter-wjs" src="http://platform.twitter.com/widgets.js" type="text/javascript"><\/script>');
+        $('head').append('<script id="twitter-wjs" src="//platform.twitter.com/widgets.js" type="text/javascript"><\/script>');
         $('#social').append('<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=' + SETTINGS.twitterHashTag + '" data-widget-id="' + SETTINGS.twitterWidgetID +'">Tweets about "' + SETTINGS.twitterHashTag + '"<\/a>');
         $('#hashtag').text(SETTINGS.twitterHashTag);
         $('#social').show();

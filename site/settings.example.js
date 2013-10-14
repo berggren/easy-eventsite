@@ -21,9 +21,10 @@ var SETTINGS = {
             autostart: false
         }
     },
-    /* Show twitter stream, search for hashtag*/
+    /* Show twitter stream */
     twitter: true,
-    hashtag: "#foobar",
+    twitterHashTag: "#foobar",
+    twitterWidgetID: "You need to create a Twitter search widget, https://twitter.com/settings/widgets/",
 
     /* Enable Disqus comments*/
     comments: true,
